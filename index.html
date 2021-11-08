@@ -15,22 +15,43 @@
     <script src="assets/exts/purecounter/purecounter.js"></script>
     <script src="assets/exts/swiper/swiper-bundle.min.js"></script>
     <script src="assets/exts/typed.js/typed.min.js"></script>
-    <!-- Main CSS File -->
+    <!-- Custom Files -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/index.js"></script>
 </head>
-<body>
+<centre><div id="buffer"><p id="loadMsg"> Please wait, loading... </p></div></centre>
+<body onload="AtStart()">
+<div class="ErrorScn">
     <header id="header" class="fixed-top header-scrolled">
         <div class="container d-flex align-items-center justify-content-between">
             <h1 class="logo"> <a href="index.html">My Portfolio</a></h1>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-                    <li><a class="nav-link scrollto" href="about.html">About</a></li>
-                    <li><a class="nav-link scrollto" href="https://meyutakun.wixsite.com/electronics4u">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+                    <li class="one"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="two"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="dropdown"><a href="#">Blog</a>
+                        <ul>
+                            <li> Not available yet. </li>
+                        </ul>
+                    </li>
+                    <li class="four"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="dropdown"><a href="#">Translate<i class="bi bi-arrow-down-circle"></i></a>
+                        <ul>
+                            <li><a href="jp-JP/index.html">Japanese</a></li>
+                        </ul>
+                    </li>
+                    <hr />
                 </ul>
             </nav>
         </div>
     </header>
+<!-- Main background -->
+<div class="bg-image">
+    <div class="mb-title">
+        <h1>I am Shubham Chakraborty (Yuta)</h1>
+    </div>
+</div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+</div>
 </body>
 </html>
