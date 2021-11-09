@@ -49,6 +49,14 @@
   -webkit-animation: buffer-trans 1s linear infinite;
 }
 
+#loadMsg{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  color: black;
+  margin-top: 5rem;
+}
+
 @-webkit-keyframes buffer-trans {
   0% {
     transform: rotate(0deg);
@@ -163,68 +171,48 @@
   cursor: pointer;
 }
 
-/* Body - Main Block */
+/* Hero section */
 /*background: linear-gradient(to left, #2C3E50, #FD746C);*/
 body{
-  background-color: black;
-  color: #ffffff;
+  background-color: rgb(22,21,21);
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
-.bg-image{
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bg-image::before{
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bkg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(assets/img/bkg.jpg);
-  filter: brightness(60%);
-}
-
-.mb-title{
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  font-size: 6rem;
-  text-align: center;
   position: relative;
-  color:#fff;
+  height: 100vh;
+  width: 100wh;
 }
 
-@media (max-width: 768px) {
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* MediaError */
+@media only screen and (max-width: 768px) {
    .ErrorScn::after{
     text-align: center;
     position: absolute;
     font-size: 2.5rem;
     font-weight: bold;
-    height: 100%;
+    top: 20%;
     width: 100%;
-    padding: 50%;
-    word-wrap: normal;
+    padding: 5%;
     content: "Sorry, this site isn't available for mobile viewing. Please navigate through desktop";
   }
-  .bg-image{
+  .hero-image, header{
     visibility: hidden;
   }
-}
-
-#loadMsg{
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 300;
-  color: black;
-  margin-top: 10rem;
 }
