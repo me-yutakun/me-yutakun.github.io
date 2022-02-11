@@ -1,8 +1,17 @@
-/* Buffer control */
-function AtStart(){
+function main(){
 setTimeout(Preloader(),10000);
-let content = document.querySelector('.typed').getAttribute('data-typed-items').split(',')
-new Typed('.typed', {
+TypedJS();
+CircularPG();
+}
+
+function Preloader(){
+document.getElementById("buffer").style.display="none";
+document.getElementById("loadMsg").style.display="none";
+}
+
+function TypedJS(){
+  let content = document.querySelector('.typed').getAttribute('data-typed-items').split(',')
+  new Typed('.typed', {
   strings: content,
   loop: true,
   typeSpeed: 100,
@@ -11,7 +20,15 @@ new Typed('.typed', {
 });
 }
 
-function Preloader(){
-document.getElementById("buffer").style.display="none";
-document.getElementById("loadMsg").style.display="none";
+function CircularPG(){
+const numb = document.querySelector(".number");
+let counter = 0;
+setInterval(() => {
+  if(counter == 100 ){
+    clearInterval();
+  }else{
+    counter+=1;
+    numb.textContent = counter + "%";
+  }
+}, 80);
 }

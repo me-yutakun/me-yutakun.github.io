@@ -1,3 +1,14 @@
+/* Whole Page */
+html, body{
+  background-color: rgb(22,21,21);
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  position: relative;
+}
+
 /* Back to top */
 .back-to-top{
   position: fixed;
@@ -175,13 +186,6 @@
   cursor: pointer;
 }
 
-/*background: linear-gradient(to left, #2C3E50, #FD746C);*/
-body{
-  background-color: rgb(22,21,21);
-  margin: 0;
-  padding: 0;
-}
-
 /* MediaError */
 
 /*@media only screen and (max-width: 768px) {
@@ -248,10 +252,244 @@ body{
   50% { opacity: 0;}
 }
 
-/* About */
 marquee {
   padding: 10px;
   color: #fff;
   font-weight: lighter;
   margin-top: 80px;
+}
+
+/* About */
+.about-sec{
+  height: 30rem;
+  width: 100wh;
+  background: linear-gradient(to left, #2C3E50, #FD746C);
+
+}
+
+h1{
+  color: rgb(214, 212, 212);
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+.about-info{
+  margin: 2rem;
+  color: white;
+  font-weight: 100;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.labels{
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(22,21,21);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-img img{
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 8px solid;
+  margin-top: 2rem;
+}
+
+.skills{
+  margin-top: 14rem;
+  line-height: 1rem;
+}
+
+.title{
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.underline{
+  border-top: 2px solid white;
+  padding-right: 5rem;
+}
+
+.progress-container{
+  height:100px;
+  width: 100px;
+  position: relative;
+  margin-top: 1rem;
+  transform: scale(0.8);
+}
+
+.inside{
+  position: absolute;
+  z-index: 10;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  background: rgb(22,21,21);
+  border-radius: 100%;
+
+}
+
+.progress-value{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:20;
+  font-size:18px;
+  font-weight:500;
+  color: #fff;
+}
+
+.bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 50%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.progress-bar-1{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+
+.left .progress-bar-1{
+  z-index: 1;
+  animation: left-1 4s linear both;
+}
+
+@keyframes left-1{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+.right {
+  transform: rotate(180deg);
+  z-index: 2;
+
+}
+
+.right .progress-bar-1{
+  animation: right-1 4s linear both;
+  animation-delay:4s;
+}
+
+@keyframes right-1{
+  100%{
+    transform: rotate(108deg);
+  }
+}
+
+/* 2nd cpg */
+.progress-bar-2{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+
+.left .progress-bar-2{
+  z-index: 1;
+  animation: left-2 4s linear both;
+}
+
+@keyframes left-2{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+.right .progress-bar-2{
+  animation: right-2 4s linear both;
+  animation-delay:4s;
+}
+
+@keyframes right-2{
+  100%{
+    transform: rotate(72deg);
+  }
+}
+
+/* 3rd cpg */
+.progress-bar-3{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+
+.left .progress-bar-3{
+  z-index: 1;
+  animation: left-3 4s linear both;
+}
+
+@keyframes left-3{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+.right .progress-bar-3{
+  animation: right-3 4s linear both;
+  animation-delay:4s;
+}
+
+@keyframes right-3{
+  100%{
+    transform: rotate(36deg);
+  }
+}
+
+/* 4th cpg */
+.progress-bar-4{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+
+.left .progress-bar-4{
+  z-index: 1;
+  animation: left-4 4s linear both;
+}
+
+@keyframes left-4{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+.right .progress-bar-4{
+  animation: right-4 4s linear both;
+  animation-delay:4s;
+}
+
+@keyframes right-4{
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.skill-label{
+  font-weight: lighter;
+  font-size: 15px;
+  color: white;
+  padding-top: 20px;
+  margin-top: 30px;
 }
